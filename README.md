@@ -102,9 +102,9 @@ TCGA-LUAD_LUSC_labels_combined.csv
 | ------------------------------- | ------------- |
 | Raw preprocessing (LUAD/LUSC)   | 3–5 min each  |
 | Merge + QC                      | < 1 min       |
-| DESeq2 normalization            | 5–8 min       |
-| Nested CV + iPSOgs optimization | **3–5 hours** |
-| External validation             | < 30 sec      |
+| DESeq2 normalization            | < 1 min        |
+| Nested CV + iPSOgs optimization | **10–15 min** |
+| External validation             | < 1 min      |
 
 🧠 Notes on Reproducibility
 - All random seeds & CV folds are deterministic.
