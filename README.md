@@ -14,7 +14,30 @@ Non-small cell lung cancer (NSCLC), primarily consisting of lung squamous cell c
 It provides complete, step-by-step scripts for reproducing all results in the paper, including data preprocessing, DESeq2 differential analysis, iPSOgs optimization, model training, external validation, and final interpretation.
 All code in this repository follows the same workflow used in the manuscript.
 📁 Repository Structure
-iPSOgs-NSCLC/ │ ├── Step 1-(a) process_and_mapped RAW LUSC.R ├── Step 1-(b) process_and_mapped RAW LUAD.R │ → Raw TCGA STAR-count preprocessing, gene mapping, QC, clinical matching │ ├── Step 2-merged.R │ → Merges LUAD + LUSC datasets, aligns shared genes, merges labels │ ├── Step 3-DSeq2.R │ → DESeq2 normalization, variance stabilization, QC, DGE results │ ├── Step 4-iPSOgs_NSCLC.py │ → Nested CV, iPSOgs hyperparameter optimization, gene selection, │ XGBoost model training, performance output, saved model artifacts │ ├── Step 5-Independant Dataset.py │ → External validation (GSE81089) using the optimized model │ ├── optimized_xgboost_model.pkl ├── label_encoder.pkl │ └── README.md
+iPSOgs-NSCLC/
+│
+├── Step 1-(a) process_and_mapped RAW LUSC.R
+├── Step 1-(b) process_and_mapped RAW LUAD.R
+│      → Raw TCGA STAR-count preprocessing, gene mapping, QC, clinical matching
+│
+├── Step 2-merged.R
+│      → Merges LUAD + LUSC datasets, aligns shared genes, merges labels
+│
+├── Step 3-DSeq2.R
+│      → DESeq2 normalization, variance stabilization, QC, DGE results
+│
+├── Step 4-iPSOgs_NSCLC.py
+│      → Nested CV, iPSOgs hyperparameter optimization, gene selection,
+│        XGBoost model training, performance output, saved model artifacts
+│
+├── Step 5-Independant Dataset.py
+│      → External validation (GSE81089) using the optimized model
+│
+├── optimized_xgboost_model.pkl
+├── label_encoder.pkl
+│
+└── README.md
+
 📦 Data Sources
 TCGA-LUAD & TCGA-LUSC
 As described in the manuscript, raw STAR-aligned read counts were downloaded from:
