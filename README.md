@@ -18,7 +18,7 @@ All code in this repository follows the same workflow used in the manuscript.
 ```text
 iPSOgs-NSCLC/
 │
-├── Step 1-(a) process_and_mapped RAW LUSC.R
+├──Step 1-(a) process_and_mapped RAW LUSC.R
 ├──Step 1-(b) process_and_mapped RAW LUAD.R
 │      → Raw TCGA STAR-count preprocessing, gene mapping, QC, clinical matching
 │
