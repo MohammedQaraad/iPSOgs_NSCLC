@@ -18,27 +18,27 @@ All code in this repository follows the same workflow used in the manuscript.
 ```text
 iPSOgs-NSCLC/
 │
-├── 🧬 Step 1-(a) process_and_mapped RAW LUSC.R
-├── 🧬 Step 1-(b) process_and_mapped RAW LUAD.R
+├── Step 1-(a) process_and_mapped RAW LUSC.R
+├──Step 1-(b) process_and_mapped RAW LUAD.R
 │      → Raw TCGA STAR-count preprocessing, gene mapping, QC, clinical matching
 │
-├── 🔗 Step 2-merged.R
+├──Step 2-merged.R
 │      → Merges LUAD + LUSC datasets, aligns shared genes, merges labels
 │
-├── 📊 Step 3-DSeq2.R
+├──Step 3-DSeq2.R
 │      → DESeq2 normalization, variance stabilization, QC, DGE results
 │
-├── 🤖 Step 4-iPSOgs_NSCLC.py
+├──Step 4-iPSOgs_NSCLC.py
 │      → Nested CV, iPSOgs hyperparameter optimization, gene selection,
 │        XGBoost model training, performance output, saved model artifacts
 │
-├── 🧪 Step 5-Independant Dataset.py
+├──Step 5-Independant Dataset.py
 │      → External validation (GSE81089) using the optimized model
 │
-├── 📦 optimized_xgboost_model.pkl
-├── 🔤 label_encoder.pkl
+├──optimized_xgboost_model.pkl
+├──label_encoder.pkl
 │
-└── 📘 README.md
+└──README.md
 ```
 
 
